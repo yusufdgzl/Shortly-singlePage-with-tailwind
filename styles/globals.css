@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@layer components {
+    .btn {
+     @apply  bg-[#3fcfcf] px-9 py-3 rounded-full text-white font-bold hover:bg-[#69DDDD];
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+
+
+.hamburger {
+    position:relative;
+    width:24px;
+    height:24px;
+    transition:all 0.25s;
+    
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+   
+    position:absolute;
+    width:24px;
+    height:2px;
+    top:0;
+    left:0;
+    background: #9c9aa6;
+    transition:all 0.5s;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.hamburger-middle {
+    transform:translateY(7px)
+}
+
+.hamburger-bottom {
+    transform:translateY(14px)
+}
+
+.open {
+    transform: rotate(90deg);
+    transform:translateY(0px)
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px)
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px)
 }
