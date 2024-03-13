@@ -9,7 +9,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="flex flex-col bg-white p-4 px-6 min-h-screen  lg:py-5 ">
+      <div className="flex flex-col bg-white p-4 px-6   lg:py-5 ">
         <nav className="flex space-x-10 justify-between items-center lg:items-start ">
           <h1 className="text-4xl font-bold text-slate-800 ">Shortly</h1>
           <div className=" lg:hidden ">
@@ -42,7 +42,15 @@ export default function HomePage() {
             </div>
           </div>
         </nav>
-        <div className="flex flex-col my-10 space-y-10 justify-center  md:items-center lg:flex-row-reverse  lg:justify-between">
+        <div className="flex flex-col relative my-10 space-y-10 justify-center  md:items-center lg:flex-row-reverse  lg:justify-between">
+          <div className={`${!menuIsVisible ? 'hidden' :'flex'} flex-col space-y-[21px] absolute bg-[#3B3054] top-0 inset-x-0 text-white p-6 text-center font-bold text-[18px] rounded-lg lg:hidden`}>
+            <a className="hover:text-[#2ACFCF]" href="#">Features</a>
+            <a className="hover:text-[#2ACFCF]" href="#">Pricing</a>
+            <a className="hover:text-[#2ACFCF]" href="#">Resources</a>
+            <hr />
+            <a className="hover:text-[#2ACFCF]" href="#">Login</a>
+            <button className="btn">Sign Up</button>
+          </div>
           <img
             src="/images/illustration-working.svg"
             className="max-w-3xl"
@@ -185,24 +193,45 @@ export default function HomePage() {
       </div>
       <div className="flex flex-col items-center bg-[#232127] py-16 space-y-14 md:space-y-0 md:flex-row md:justify-between md:px-10">
         <img src="/images/logo.svg" alt="" />
-        <div className="flex flex-col space-y-14 md:flex-row md:space-x-14 md:space-y-0">
+        <div className="flex flex-col space-y-14 md:flex-row md:space-x-16 md:space-y-0">
           <div className="flex flex-col space-y-3 text-center font-semibold text-gray-500">
             <h3 className="text-white text-xl">Features</h3>
-            <a className="hover:text-[#2ACFCF]" href="#">Link Shortening</a>
-            <a className="hover:text-[#2ACFCF]" href="#">Branded Links</a>
-            <a className="hover:text-[#2ACFCF]" href="#">Analytics</a>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Link Shortening
+            </a>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Branded Links
+            </a>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Analytics
+            </a>
           </div>
           <div className="flex flex-col space-y-3 text-center font-semibold text-gray-500">
-            <h3 className="text-white text-xl">Features</h3>
-            <a className="hover:text-[#2ACFCF]" href="#">Link Shortening</a>
-            <a className="hover:text-[#2ACFCF]" href="#">Branded Links</a>
-            <a className="hover:text-[#2ACFCF]" href="#">Analytics</a>
+            <h3 className="text-white text-xl">Resources</h3>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Blog
+            </a>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Developers
+            </a>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Support
+            </a>
           </div>
           <div className="flex flex-col space-y-3 text-center font-semibold text-gray-500">
-            <h3 className="text-white text-xl">Features</h3>
-            <a className="hover:text-[#2ACFCF]" href="#">Link Shortening</a>
-            <a className="hover:text-[#2ACFCF]" href="#">Branded Links</a>
-            <a className="hover:text-[#2ACFCF]" href="#">Analytics</a>
+            <h3 className="text-white text-xl">Company</h3>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              About
+            </a>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Our Team
+            </a>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Careers
+            </a>
+            <a className="hover:text-[#2ACFCF]" href="#">
+              Contact
+            </a>
           </div>
         </div>
         <div className=" flex  space-x-7">
